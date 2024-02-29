@@ -36,3 +36,9 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Note
+1: cd colorampgen
+2: npm install
+3: ggit init && git add -A && git commit -m "Initial commit" (optional)
+4: npm run dev -- --open

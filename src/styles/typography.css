@@ -1,0 +1,36 @@
+@import url('./vars.css');
+
+.display-l, .display-m, .display-s {
+  line-height: var(--lineheight-xs);
+  font-weight: var(--fontweight-m);
+}
+
+.display-l {font-size: clamp(4rem, 4vw, 6rem);}
+.display-m {font-size: clamp(3rem, 3vw, 5rem);}
+.display-s {font-size: clamp(2.5rem, 2.5vw, 4rem);}
+
+.heading-l, .heading-m, .heading-s {
+  line-height: var(--lineheight-heading);
+  font-weight: var(--fontweight-l);
+}
+
+.heading-xs, .heading-xxs {
+  line-height: var(--lineheight-heading);
+  font-weight: var(--fontweight-m);
+}
+
+.heading-l {font-size: 2.25rem;}
+.heading-m {font-size: 2rem;}
+.heading-s {font-size: 1.75rem;}
+.heading-xs {font-size: 1.5rem;}
+.heading-xxs {font-size: 1.25rem;}
+
+.body-l, .body-m, .body-s, .body-xs {
+  line-height: var(--lineheight-body);
+  font-weight: var(--fontweight-s);
+}
+
+.body-l {font-size: var(--fontsizebody-l);}
+.body-m {font-size: var(--fontsizebody-m);}
+.body-s {font-size: var(--fontsizebody-s);}
+.body-xs {font-size: var(--fontsizebody-xs);}

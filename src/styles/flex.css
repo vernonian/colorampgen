@@ -1,0 +1,45 @@
+@import url('./vars.css');
+/* Generic flex classes*/
+.f-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
+}
+
+.f-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap-m);
+}
+
+/* flex classes are labeled "f-[align-items]-[justify-content]" */
+.f-start-start { align-items: flex-start; justify-content: flex-start; }
+.f-start-center { align-items: flex-start; justify-content: center; }
+.f-start-end { align-items: flex-start; justify-content: end; }
+.f-start-between { align-items: flex-start; justify-content: space-between; width: 100%;}
+.f-start-around { align-items: flex-start; justify-content: space-around; width: 100%;}
+.f-start-evenly { align-items: flex-start; justify-content: space-evenly; width: 100%;}
+
+.f-center-start { align-items: center; justify-content: flex-start; }
+.f-center-center { align-items: center; justify-content: center; }
+.f-center-end { align-items: center; justify-content: end; }
+.f-center-between { align-items: center; justify-content: space-between; width: 100%;}
+.f-center-around { align-items: center; justify-content: space-around; width: 100%;}
+.f-center-evenly { align-items: center; justify-content: space-evenly; width: 100%;}
+
+.f-end-start { align-items: flex-end; justify-content: flex-start; }
+.f-end-center { align-items: flex-end; justify-content: center; }
+.f-end-center { align-items: flex-end; justify-content: end; }
+.f-end-between { align-items: flex-end; justify-content: space-between; width: 100%;}
+.f-end-around { align-items: flex-end; justify-content: space-around; width: 100%;}
+.f-end-evenly { align-items: flex-end; justify-content: space-evenly; width: 100%;}
+
+/* Flex shorthand classes where[label] is applied to align-items and justify-content */
+.f-start { align-items: start; justify-content: start; }
+.f-center { align-items: center; justify-content: center; }
+.f-end { align-items: end; justify-content: end; }
+
+/* Modifying classes */
+.f-no-wrap {flex-wrap: nowrap}
+.f-wrap { flex-wrap: wrap;}
