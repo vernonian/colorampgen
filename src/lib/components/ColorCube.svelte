@@ -14,8 +14,8 @@
 	export let name: string;
 	export let index: number | string;
 
-	let hexLabel: string = color.toUpperCase();
-	let tokenLabel: string = `--${name}-${index.toString()}`;
+	const hexLabel: string = color.toUpperCase();
+	const tokenLabel: string = `--${name}-${index.toString()}`;
 
 	/**
 	 * Copy a string of text to the clipboard
