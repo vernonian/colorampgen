@@ -1,9 +1,11 @@
 <script>
   import TextInputUnit from '$lib/components/TextInputUnit.svelte';
 </script>
-<h2>ColoRampGen</h2>
-<p>Enter a hex code and click "Generate" to create a color ramp of tints and shades.</p>
-<p>Once the colors are generated, click to copy the hex code.</p>
+<section class="f-col">
+  <h2>ColoRampGen</h2>
+  <p>Enter a hex code and click "Generate" to create a color ramp of tints and shades.</p>
+  <p>Once the colors are generated, click to copy the hex code.</p>
+</section>
 <section id="main-grid" class="grid">
   <aside>
     <form class="f-col">
@@ -21,9 +23,7 @@
               id="generate-btn">Generate Color Ramp</button>
       </form>
   </aside>
-  <section id="target">
-
-  </section>
+  <section id="target"></section>
 </section>
 
 

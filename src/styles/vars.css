@@ -4,50 +4,50 @@
  shishkebab case slows down typing, so it should be limited only when neccessary.
 */
 :root {
-    
-  /* TYPOGRAPHY =============================== */
-    --fontsizebody-xl: max(1.4rem, 21px);
-    --fontsizebody-l:  max(1.2rem, 18px);
-    --fontsizebody-m:  max(1rem, 16px);
-    --fontsizebody-s:  max(0.85rem, 14px);
-    --fontsizebody-xs: max(0.75rem, 12px);
-  
-    --lineheight-xl: 2;
-    --lineheight-l: 1.6;
-    --lineheight-m: 1.4;
-    --lineheight-s: 1.2;
-    --lineheight-xs: 1;
 
-    --lineheight-heading: var(--lineheight-s);
-    --lineheight-body: var(--lineheight-m);
-  
-    /* Font weight */
-    --fontweight-xl: 700;
-    --fontweight-l:  600;
-    --fontweight-m:  500;
-    --fontweight-s:  400;
-    --fontweight-xs: 300;
-  
+  /* TYPOGRAPHY =============================== */
+  --fontsizebody-xl: max(1.4rem, 21px);
+  --fontsizebody-l: max(1.2rem, 18px);
+  --fontsizebody-m: max(1rem, 16px);
+  --fontsizebody-s: max(0.85rem, 14px);
+  --fontsizebody-xs: max(0.75rem, 12px);
+
+  --lineheight-xl: 2;
+  --lineheight-l: 1.6;
+  --lineheight-m: 1.4;
+  --lineheight-s: 1.2;
+  --lineheight-xs: 1;
+
+  --lineheight-heading: var(--lineheight-s);
+  --lineheight-body: var(--lineheight-m);
+
+  /* Font weight */
+  --fontweight-xl: 700;
+  --fontweight-l: 600;
+  --fontweight-m: 500;
+  --fontweight-s: 400;
+  --fontweight-xs: 300;
+
   /* GAPS & SPACING ================================= */
 
   /* Generic Spacing Units */
   --xxl: max(8rem, 10vw);
-  --xl:  max(4rem, 5vw);
-  --l:   max(2rem, 2.5vw);
-  --m:   max(1rem, 1.25vw);
-  --s:   max(0.5rem, 0.75vw);
-  --xs:  max(0.25rem, 0.375vw);
+  --xl: max(4rem, 5vw);
+  --l: max(2rem, 2.5vw);
+  --m: max(1rem, 1.25vw);
+  --s: max(0.5rem, 0.75vw);
+  --xs: max(0.25rem, 0.375vw);
   --xxs: max(0.125rem, 0.1425vw);
 
   /* Used for spacing properties like gap, margin, padding, etc. */
   --gap-xxl: var(--xxl);
-  --gap-xl:  var(--xl);
-  --gap-l:   var(--l);
-  --gap-m:   var(--m);
-  --gap-s:   var(--s);
-  --gap-xs:  var(--xs);
+  --gap-xl: var(--xl);
+  --gap-l: var(--l);
+  --gap-m: var(--m);
+  --gap-s: var(--s);
+  --gap-xs: var(--xs);
   --gap-xxs: var(--xxs);
-  
+
   --gap-0: 0px;
   --gap-page: 5vw;
   --v-gap-section: clamp(var(--gap-m), 5vh, var(--gap-xl));
@@ -55,75 +55,73 @@
 
   --padding-section: var(--v-gap-section) var(--h-gap-section);
   --padding-xxl: var(--gap-xxl);
-  --padding-xl:  var(--gap-xl);
-  --padding-l:   var(--gap-l);
-  --padding-m:   var(--gap-m);
-  --padding-s:   var(--gap-s) var(--gap-m);
-  --padding-xs:  var(--gap-xs) var(--gap-s);
+  --padding-xl: var(--gap-xl);
+  --padding-l: var(--gap-l);
+  --padding-m: var(--gap-m);
+  --padding-s: var(--gap-s) var(--gap-m);
+  --padding-xs: var(--gap-xs) var(--gap-s);
   --padding-xxs: var(--gap-xxs) var(--gap-xs);
   --padding-0: 0px;
-  
+
   /* BORDERS ================================= */
-    --br-xxl: 999px;
-    --br-xl:  var(--gap-xl);
-    --br-l:   var(--gap-l);
-    --br-m:   var(--gap-m);
-    --br-s:   var(--gap-s);
-    --br-xs:  var(--gap-xs);
-    --br-xxs: var(--gap-xxs);
-  
-    --border-l: 4px solid currentcolor;
-    --border-m: 2px solid currentcolor;
-    --border-s: 1px solid currentcolor;
-  
+  --br-xxl: 999px;
+  --br-xl: var(--gap-xl);
+  --br-l: var(--gap-l);
+  --br-m: var(--gap-m);
+  --br-s: var(--gap-s);
+  --br-xs: var(--gap-xs);
+  --br-xxs: var(--gap-xxs);
+
+  --border-l: 4px solid currentcolor;
+  --border-m: 2px solid currentcolor;
+  --border-s: 1px solid currentcolor;
+
   /* WIDTHS ==================================== */
-    --maxwidth-xxl: 96rem;
-    --maxwidth-xl:  72rem;
-    --maxwidth-l:   45rem;
-    --maxwidth-m:   36rem;
-    --maxwidth-s:   27rem;
-    --maxwidth-xs:  18rem;
-    --maxwidth-xxs: 9rem;
-  
-    --maxwidth-page: 72rem;
-  
+  --maxwidth-xxl: 96rem;
+  --maxwidth-xl: 72rem;
+  --maxwidth-l: 45rem;
+  --maxwidth-m: 36rem;
+  --maxwidth-s: 27rem;
+  --maxwidth-xs: 18rem;
+  --maxwidth-xxs: 9rem;
+
+  --maxwidth-page: 72rem;
+
   /* MOTOIN ================================ */
-    --transition-l: all 0.5s;
-    --transition-m: all 0.2s;
-    --transition-s: all 0.1s;
-    
+  --transition-l: all 0.5s;
+  --transition-m: all 0.2s;
+  --transition-s: all 0.1s;
+
   /* GRID ====================================== */
-    /* 1 Column */
-    --gridcol-1: 1fr;
-  
-    /* 2 Columns */
-    --gridcol-1-1: 1fr 1fr;
-    --gridcol-1-2: 1fr 2fr;
-    --gridcol-2-1: 2fr 1fr;
-  
-    /* 3 Columns */
-    --gridcol-1-1-1: 1fr 1fr 1fr;
-    --gridcol-1-2-1: 1fr 2fr 1fr;
-    --gridcol-2-1-1: 2fr 1fr 1fr;
-    --gridcol-1-1-2-: 1fr 1fr 2fr;
-  
-    /* 4 Columns */
-    --gridcol-1-1-1-1: 1fr 1fr 1fr 1fr;
-    --gridcol-1-2-2-1: 1fr 2fr 2fr 1fr;
-  
-    /* Note: More complicated grid layouts should be managed on a case by case basis. */
-  
+  /* 1 Column */
+  --gridcol-1: 1fr;
+
+  /* 2 Columns */
+  --gridcol-1-1: 1fr 1fr;
+  --gridcol-1-2: 1fr 2fr;
+  --gridcol-2-1: 2fr 1fr;
+
+  /* 3 Columns */
+  --gridcol-1-1-1: 1fr 1fr 1fr;
+  --gridcol-1-2-1: 1fr 2fr 1fr;
+  --gridcol-2-1-1: 2fr 1fr 1fr;
+  --gridcol-1-1-2-: 1fr 1fr 2fr;
+
+  /* 4 Columns */
+  --gridcol-1-1-1-1: 1fr 1fr 1fr 1fr;
+  --gridcol-1-2-2-1: 1fr 2fr 2fr 1fr;
+
+  /* Note: More complicated grid layouts should be managed on a case by case basis. */
+
   /* Z Index ================================= */
-    --z-max: 999999px;
-    --z-5: 5;
-    --z-4: 4;
-    --z-3: 3;
-    --z-2: 2;
-    --z-1: 1;
-    --z-0: 0;
-  
+  --z-max: 999999px;
+  --z-5: 5;
+  --z-4: 4;
+  --z-3: 3;
+  --z-2: 2;
+  --z-1: 1;
+  --z-0: 0;
+
   /* MISC =================================== */
-    
-  }
-  
-  
+
+}
