@@ -10,6 +10,7 @@
   type={buttonType}
   id={id}>
   on:click={handleClick}
+  >
   {text}
 </button>
 
