@@ -54,6 +54,8 @@
   --h-gap-section: max(var(--gap-s), 5vw);
 
   --padding-section: var(--v-gap-section) var(--h-gap-section);
+  --padding-inline: var(--padding-s) var(--padding-m);
+
   --padding-xxl: var(--gap-xxl);
   --padding-xl: var(--gap-xl);
   --padding-l: var(--gap-l);

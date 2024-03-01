@@ -1,6 +1,10 @@
 <script>
   import TextInputUnit from '$lib/components/TextInputUnit.svelte';
+  import InteractiveButton from '$lib/components/InteractiveButton.svelte';
+
+  //generate function
 </script>
+
 <section class="f-col">
   <h2>ColoRampGen</h2>
   <p>Enter a hex code and click "Generate" to create a color ramp of tints and shades.</p>
@@ -19,6 +23,11 @@
         inputId="name-input" 
         placeholder="My Color" 
       />
+      <InteractiveButton
+        id="generate-btn"
+        text="Generate Color Ramp"
+        handleClick={}
+      ></InteractiveButton>
       <button type="button"
               id="generate-btn">Generate Color Ramp</button>
       </form>
