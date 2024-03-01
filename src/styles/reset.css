@@ -11,3 +11,8 @@ img, video {
 button, input {
   font-family: inherit;
 }
+
+button, a {
+  cursor: pointer;
+  border: none;
+}

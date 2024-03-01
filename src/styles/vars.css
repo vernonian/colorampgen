@@ -60,9 +60,9 @@
   --padding-xl: var(--gap-xl);
   --padding-l: var(--gap-l);
   --padding-m: var(--gap-m);
-  --padding-s: var(--gap-s) var(--gap-m);
-  --padding-xs: var(--gap-xs) var(--gap-s);
-  --padding-xxs: var(--gap-xxs) var(--gap-xs);
+  --padding-s: var(--gap-s);
+  --padding-xs: var(--gap-xs);
+  --padding-xxs: var(--gap-xxs);
   --padding-0: 0px;
 
   /* BORDERS ================================= */

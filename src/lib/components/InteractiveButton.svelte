@@ -1,18 +1,18 @@
 <script lang="ts">
+	import type { MouseEventHandler } from "svelte/elements";
+
   export let id:string;
   export let buttonType: "button" | "submit" | "reset" = "button";
   export let text:string;
-  export let handleClick:Function;
+  export let handleClick:MouseEventHandler<any>;
 </script>
 
 <button 
   class="interactive-button"
   type={buttonType}
-  id={id}>
+  id={id}
   on:click={handleClick}
-  >
-  {text}
-</button>
+  >{text}</button>
 
 <style>
   .interactive-button {
