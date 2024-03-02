@@ -1,8 +1,8 @@
 <script lang="ts">
-  export let placeholder:String = "Enter text";
-  export let inputId:String;
-  export let label:String = "Label"
-  export let value:String = "";
+  export let placeholder:string = "Enter text";
+  export let inputId:string;
+  export let label:string = "Label"
+  export let boundValue:string;
 </script>
 
 <div class="text-input-unit f-col gap-s">
@@ -11,7 +11,9 @@
           id={inputId}
           placeholder={placeholder}
           required
-          autocomplete="off">
+          autocomplete="off"
+          bind:value={boundValue}
+          />
 </div>
 
 <style>
