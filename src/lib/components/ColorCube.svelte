@@ -19,7 +19,7 @@
 	const tokenLabel: string = `--${name}-${index.toString()}`;
 </script>
 
-<div class="color-cube-wrap f-col f-center-end gap-xxs">
+<div class="color-cube-wrap f-col f-center-end">
 	<button
     type="button"
 		class="color-cube"
@@ -49,6 +49,11 @@
 </div>
 
 <style>
+
+	.color-cube-wrap {
+		gap: 0px;	
+	}
+
 	.color-cube {
 		width: 100px;
 		height: 100px;
@@ -65,6 +70,7 @@
   .hex-label, .token-label {
     border: none;
     background-color: transparent;
+		width: 100%;
     display: flex;
 		align-items: center;
 		justify-content: center;
@@ -84,7 +90,6 @@
 
 	.hex-label:hover {
 		background-color: rgba(0, 0, 0, 0.1);
-		transform: scale(1.025);
 	}
 
   .color-cube:active,

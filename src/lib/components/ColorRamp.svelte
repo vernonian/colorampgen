@@ -118,6 +118,7 @@
 
 	.color-ramp {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 1rem;
 		list-style: none;
 		padding: 0px;
