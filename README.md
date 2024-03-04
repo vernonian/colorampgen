@@ -1,43 +1,22 @@
-# create-svelte
+# ColorampGen
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Weclome to ColorampGen!
 
-## Creating a project
+## Intro
 
-If you're seeing this, you've probably already done this step. Congrats!
+### What is ColorampGen?
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+ColorampGen is a tool used for generating color ramps for web and UI design systems.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+### Why ColorampGen?
 
-## Developing
+As a UI designer, I was frusterated by my slow and repetative process of creating color ramps in Figma, so I created this to speed up my workflow.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Who is ColorampGen for?
 
-```bash
-npm run dev
+It is for anyone who wants to quickly generate a color ramp based on a single hex color code. I would say it's mainly for web, digital, and UI designers and developers, but anyone can use it.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Note
+## Notes to self
 1: cd colorampgen
 2: npm install
 3: ggit init && git add -A && git commit -m "Initial commit" (optional)
