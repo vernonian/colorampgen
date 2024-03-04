@@ -5,7 +5,7 @@
 
 	//generate function
 
-	let inputHex: string;
+	let inputHex: string = "#FECE00";
 	let inputName: string;
 
 	/**
@@ -17,12 +17,14 @@
 		return hexCodeRegex.test(input);
 	}
 
-	type ColorRampProps = {
+	
+	// Define type for object in color ramps array
+	type ColorRampItem = {
 		baseName: string;
 		baseHex: string;
 	};
 
-	let colorRamps: object[] = [];
+	let colorRamps: ColorRampItem[] = [];
 
 	function handleCreateColorRamp(hex: string, name: string) {
 		console.log(hex);
@@ -45,6 +47,7 @@
 			colorRamps = [...colorRamps, { baseName: name, baseHex: hex }];
 		} else {
 			alert('Error: Invalid hex code. Please enter a valid hex code.');
+			return;
 		}
 	}
 </script>
@@ -80,7 +83,7 @@
 		</form>
 	</aside>
 	<section id="target">
-		{#each colorRamps as ramp}
+		{#each colorRamps as ramp (ramp.baseHex)}
 			<ColorRamp baseName={ramp.baseName} baseHex={ramp.baseHex} />
 		{/each}
 	</section>

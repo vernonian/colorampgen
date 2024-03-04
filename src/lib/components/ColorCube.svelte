@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { copyToClipboard } from "$lib/index";
 	/**
 	 * ColorCube Componenet
 	 * @param {string}
@@ -16,23 +17,6 @@
 
 	const hexLabel: string = color.toUpperCase();
 	const tokenLabel: string = `--${name}-${index.toString()}`;
-
-	/**
-	 * Copy a string of text to the clipboard
-	 * @param {string} textToCopy
-	 */
-	function copyToClipboard(textToCopy: string) {
-		const copyContent = async () => {
-			try {
-				// TODO: give the user feedback that something has been copied
-				await navigator.clipboard.writeText(textToCopy);
-				console.log(textToCopy);
-			} catch (err) {
-				console.error('Failed to copy: ', err);
-			}
-		};
-		copyContent();
-	}
 </script>
 
 <div class="color-cube-wrap f-col f-center-end gap-xxs">
