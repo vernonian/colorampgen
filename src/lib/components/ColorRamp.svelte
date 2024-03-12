@@ -101,7 +101,18 @@
 					copyToClipboard(rampCSS);
 				}}>Copy CSS</button
 			>
-			<div class="token-list" style="background-color: {rampShades[0].hex};">
+			<div 
+				class="token-list" 
+				style="background-color: {rampShades[0].hex};"
+				role="button"
+				tabindex="0"
+				on:click={() => {
+					copyToClipboard(rampCSS)}
+				}
+				on:keypress={() => {
+					copyToClipboard(rampCSS)}
+				}
+					>
 				{#each rampShades as shade, i}
 					{shade.label}: {shade.hex};<br />
 				{/each}

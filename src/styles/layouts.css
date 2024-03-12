@@ -1,0 +1,9 @@
+/* Generic section */
+.section-wrap {
+  padding: var(--padding-section);
+}
+
+.content-wrap {
+  margin: 0px auto;
+  max-width: 100%;
+}

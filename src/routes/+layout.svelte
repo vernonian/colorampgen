@@ -1,9 +1,11 @@
-<header>
-  <nav class="f-row">
-    <svg></svg>
-    <h1>ColoRampGen</h1>
-  </nav>
-</header>
+<script>
+  import Footer from "$lib/components/Footer.svelte";
+	import Header from "$lib/components/Header.svelte";
+  import '../app.css';
+</script>
+
+<Header/>
 <main>
   <slot />
 </main>
+<Footer/>

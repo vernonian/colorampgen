@@ -2,6 +2,7 @@
 	import TextInputUnit from '$lib/components/TextInputUnit.svelte';
 	import InteractiveButton from '$lib/components/InteractiveButton.svelte';
 	import ColorRamp from '$lib/components/ColorRamp.svelte';
+	import DetailsDropdown from '$lib/components/DetailsDropdown.svelte';
 
 		// Types
 		// Define type for object in color ramps array
@@ -55,43 +56,51 @@
 	}
 </script>
 
-<section class="f-col">
-	<h1>ColoRampGen</h1>
-	<section id="main-grid" class="grid">
-		<aside class="f-col">
-			<details>
-				<summary>How do I use this?</summary>
-				<p>
-					Enter a hex code and click "Generate" to create a color ramp of tints and shades. Once the
-					colors are generated, click to copy the hex code.
-				</p>
-			</details>
-			<form class="f-col">
-				<TextInputUnit
-					label="Hex Code"
-					inputId="hex-input"
-					placeholder="#FECE00"
-					bind:boundValue={inputHex}
-				/>
-				<TextInputUnit
-					label="Token Name"
-					inputId="name-input"
-					placeholder="My Color"
-					bind:boundValue={inputName}
-				/>
-				<InteractiveButton
-					id="generate-btn"
-					text="Generate Color Ramp"
-					handleClick={() => handleCreateColorRamp(inputHex, inputName)}
-				></InteractiveButton>
-			</form>
-		</aside>
-		<section id="target" class="f-col">
-			{#each colorRamps as ramp (ramp.id)}
-				<ColorRamp baseName={ramp.baseName} baseHex={ramp.baseHex} />
-			{/each}
+<section class="section-wrap">
+	<div class="content-wrap f-col">	
+		<h1 class="display-m">Color Ramp Generator</h1>
+		<section id="main-grid" class="grid">
+			<aside class="f-col">
+
+				<form class="f-col">
+					<TextInputUnit
+						label="Hex Code"
+						inputId="hex-input"
+						placeholder="#FECE00"
+						bind:boundValue={inputHex}
+					/>
+					<TextInputUnit
+						label="Token Name"
+						inputId="name-input"
+						placeholder="My Color"
+						bind:boundValue={inputName}
+					/>
+					<InteractiveButton
+						id="generate-btn"
+						text="Generate Color Ramp"
+						handleClick={() => handleCreateColorRamp(inputHex, inputName)}
+					></InteractiveButton>
+				</form>
+				<DetailsDropdown summary="How do I use this?">
+					<p>
+						Enter a hex code and click "Generate" to create a color ramp of tints and shades. Once the
+						colors are generated, click to copy the hex code.
+					</p>
+				</DetailsDropdown>
+				<DetailsDropdown summary="What is this?">
+					<p>
+						ColorampGen is a tool to create color ramps from a single hex code.
+					</p>
+					<p><a href="https://github.com/vernonian/colorampgen" target="_blank">See GitHub repo</a> for more.</p>
+				</DetailsDropdown>
+			</aside>
+			<section id="target" class="f-col">
+				{#each colorRamps as ramp (ramp.id)}
+					<ColorRamp baseName={ramp.baseName} baseHex={ramp.baseHex} />
+				{/each}
+			</section>
 		</section>
-	</section>
+	</div>
 </section>
 
 <style>
@@ -99,5 +108,6 @@
 		grid-template-columns: 200px 1fr;
 		width: 100%;
 		overflow-x: hidden;
+		min-height: 95vh;
 	}
 </style>

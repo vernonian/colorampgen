@@ -33,7 +33,7 @@
 
 .f-end-start   { align-items: flex-end; justify-content: flex-start; }
 .f-end-center  { align-items: flex-end; justify-content: center; }
-.f-end-center  { align-items: flex-end; justify-content: end; }
+.f-end-end  { align-items: flex-end; justify-content: end; }
 .f-end-between { align-items: flex-end; justify-content: space-between; width: 100%;}
 .f-end-around  { align-items: flex-end; justify-content: space-around; width: 100%;}
 .f-end-evenly  { align-items: flex-end; justify-content: space-evenly; width: 100%;}

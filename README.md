@@ -21,3 +21,6 @@ It is for anyone who wants to quickly generate a color ramp based on a single he
 2: npm install
 3: ggit init && git add -A && git commit -m "Initial commit" (optional)
 4: npm run dev -- --open
+
+### To do
+Fonts, style, 
