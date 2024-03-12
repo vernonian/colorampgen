@@ -5,29 +5,6 @@
 */
 :root {
 
-  /* TYPOGRAPHY =============================== */
-  --fontsizebody-xl: max(1.4rem, 21px);
-  --fontsizebody-l: max(1.2rem, 18px);
-  --fontsizebody-m: max(1rem, 16px);
-  --fontsizebody-s: max(0.85rem, 14px);
-  --fontsizebody-xs: max(0.75rem, 12px);
-
-  --lineheight-xl: 2;
-  --lineheight-l: 1.6;
-  --lineheight-m: 1.4;
-  --lineheight-s: 1.2;
-  --lineheight-xs: 1;
-
-  --lineheight-heading: var(--lineheight-s);
-  --lineheight-body: var(--lineheight-m);
-
-  /* Font weight */
-  --fontweight-xl: 700;
-  --fontweight-l: 600;
-  --fontweight-m: 500;
-  --fontweight-s: 400;
-  --fontweight-xs: 300;
-
   /* GAPS & SPACING ================================= */
 
   /* Generic Spacing Units */
@@ -50,8 +27,6 @@
 
   --gap-0: 0px;
   --gap-page: 5vw;
-  --v-gap-section: clamp(var(--gap-m), 5vh, var(--gap-xl));
-  --h-gap-section: max(var(--gap-s), 5vw);
 
   --padding-section: var(--m);
   --padding-inline: var(--padding-s) var(--padding-m);
@@ -113,8 +88,6 @@
   --gridcol-1-1-1-1: 1fr 1fr 1fr 1fr;
   --gridcol-1-2-2-1: 1fr 2fr 2fr 1fr;
 
-  /* Note: More complicated grid layouts should be managed on a case by case basis. */
-
   /* Z Index ================================= */
   --z-max: 999999px;
   --z-5: 5;
@@ -123,8 +96,5 @@
   --z-2: 2;
   --z-1: 1;
   --z-0: 0;
-
-  /* MISC =================================== */
-
 }
 

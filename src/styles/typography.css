@@ -1,4 +1,29 @@
-@import url('./vars.css');
+:root {
+  --fontsizebody-xl: max(1.4rem, 21px);
+  --fontsizebody-l: max(1.2rem, 18px);
+  --fontsizebody-m: max(1rem, 16px);
+  --fontsizebody-s: max(0.85rem, 14px);
+  --fontsizebody-xs: max(0.75rem, 12px);
+
+  --lineheight-xl: 2;
+  --lineheight-l: 1.6;
+  --lineheight-m: 1.4;
+  --lineheight-s: 1.2;
+  --lineheight-xs: 1;
+
+  --lineheight-heading: var(--lineheight-s);
+  --lineheight-body: var(--lineheight-m);
+
+  --fontweight-xl: 700;
+  --fontweight-l: 600;
+  --fontweight-m: 500;
+  --fontweight-s: 400;
+  --fontweight-xs: 300;
+}
+
+body {
+  font-family: "Space Grotest", sans-serif;
+}
 
 .display-l, .display-m, .display-s {
   line-height: var(--lineheight-xs);

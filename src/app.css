@@ -1,8 +1,2 @@
 @import url('./styles/index.css');
 
-body {
-  font-family: "Space Grotesk", sans-serif;
-  margin: 0px;
-  width: 100%;
-  overflow-x: hidden;
-}
