@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { copyToClipboard } from "$lib/index";
-	import copyIcon from "$lib/icons/copyIcon.svelte";
 	import CopyIcon from "$lib/icons/copyIcon.svelte";
+	
 	/**
 	 * ColorCube Componenet
 	 * @param {string}

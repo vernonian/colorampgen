@@ -3,6 +3,7 @@
 	import InteractiveButton from '$lib/components/InteractiveButton.svelte';
 	import ColorRamp from '$lib/components/ColorRamp.svelte';
 	import DetailsDropdown from '$lib/components/DetailsDropdown.svelte';
+	import CopyToClipboard from '$lib/components/CopyToClipboard.svelte';
 
 		// Types
 		// Define type for object in color ramps array
@@ -55,6 +56,12 @@
 		}
 	}
 </script>
+
+<CopyToClipboard stringToCopy="test" on:copy={() => {
+		console.log("Copy Event");
+	}} >
+	Click me
+</CopyToClipboard>
 
 <section class="section-wrap">
 	<div class="content-wrap f-col">	
