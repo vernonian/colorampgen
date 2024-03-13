@@ -83,7 +83,7 @@
 <section class="color-ramp-wrap f-col" style="border-color:{rampShades[5].hex};">
 	<div class="f-col gap-xxs">
 		<h3>{baseName}</h3>
-		<p>Base color: <span>{baseHex}</span></p>
+		<p class="ramp-label">Base color: <span class="color-preview" style="background-color:{baseHex};"></span> <span>{baseHex}</span></p>
 	</div>
 
 	<ul class="color-ramp">
@@ -135,6 +135,20 @@
 		gap: 1rem;
 		list-style: none;
 		padding: 0px;
+	}
+
+	.ramp-label {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		gap: var(--xs);
+	}
+
+	.color-preview {
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		border-radius: var(--br-xl);
 	}
 
   details div.f-col:first-of-type {

@@ -13,9 +13,9 @@
 	};
 
 	// Vars
-	let inputHex: string = '#FECE00';
+	let inputHex: string = '#CACACA';
 	let inputName: string;
-	let colorRamps: ColorRampItem[] = [];
+	let colorRamps: ColorRampItem[] = [ {baseName: "Gray", baseHex: "#CACACA", id:0} ];
 
 	// Functions
 	/**
