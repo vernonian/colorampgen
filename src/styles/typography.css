@@ -14,20 +14,24 @@
   --lineheight-heading: var(--lineheight-s);
   --lineheight-body: var(--lineheight-m);
 
-  --fontweight-xl: 700;
-  --fontweight-l: 600;
-  --fontweight-m: 500;
-  --fontweight-s: 400;
-  --fontweight-xs: 300;
+  --fontweight-b: 700;  /* Bold */
+  --fontweight-sb: 600; /* Semibold */ 
+  --fontweight-m: 500;  /* Medium */
+  --fontweight-r: 400;  /* Regular */
+  --fontweight-l: 300;  /* Light */
+
+  --fontfamily-sans-serif: "Space Grotesk", sans-serif;
+  --fontfamily-monospace: "Space Mono", monospace;
 }
 
 body {
-  font-family: "Space Grotest", sans-serif;
+  font-family: var(--fontfamily-sans-serif);
+  color: var(--black);
 }
 
 .display-l, .display-m, .display-s {
   line-height: var(--lineheight-xs);
-  font-weight: var(--fontweight-m);
+  font-weight: var(--fontweight-b);
 }
 
 .display-l {font-size: clamp(4rem, 4vw, 6rem);}
@@ -36,7 +40,7 @@ body {
 
 .heading-l, .heading-m, .heading-s {
   line-height: var(--lineheight-heading);
-  font-weight: var(--fontweight-l);
+  font-weight: var(--fontweight-sb);
 }
 
 .heading-xs, .heading-xxs {
@@ -52,7 +56,7 @@ body {
 
 .body-l, .body-m, .body-s, .body-xs {
   line-height: var(--lineheight-body);
-  font-weight: var(--fontweight-s);
+  font-weight: var(--fontweight-r);
 }
 
 .body-l {font-size: var(--fontsizebody-l);}

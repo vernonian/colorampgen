@@ -5,16 +5,17 @@
   --white: #FFFFFF;
 
   /* Gray */
-  --gray-9: #2e2d2e;
-  --gray-8: #5c5a5c;
-  --gray-7: #89878a;
-  --gray-6: #b7b4b8;
-  --gray-5: #e5e1e6;
-  --gray-4: #eae7eb;
-  --gray-3: #efedf0;
-  --gray-2: #f5f3f5;
-  --gray-1: #faf9fa;
-  --gray-0: #fefefe;
+  --gray-0: #fafafa;
+  --gray-1: #f4f4f4;
+  --gray-2: #eaeaea;
+  --gray-3: #dfdfdf;
+  --gray-4: #d5d5d5;
+  --gray-5: #CACACA;
+  --gray-6: #a2a2a2;
+  --gray-7: #797979;
+  --gray-8: #515151;
+  --gray-9: #282828;
+
   
   /* Orange */
   --orange-9: #4A331A;

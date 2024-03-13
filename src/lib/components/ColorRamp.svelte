@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ColorCube from './ColorCube.svelte';
 	import { copyToClipboard } from '$lib/index';
+	import CopyIcon from '$lib/icons/copyIcon.svelte';
 
 	type ColorShadePair = {
 		hex: string;
@@ -96,11 +97,12 @@
 		<summary>CSS Tokens</summary>
 		<div class="f-col">
 			<button
-				class="copy-CSS-btn"
+				class="copy-CSS-btn f-row gap-xxs"
 				on:click={() => {
 					copyToClipboard(rampCSS);
-				}}>Copy CSS</button
-			>
+				}}>Copy CSS
+					<CopyIcon/>
+			</button>
 			<div 
 				class="token-list" 
 				style="background-color: {rampShades[0].hex};"

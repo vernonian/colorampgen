@@ -64,13 +64,13 @@
 
 				<form class="f-col">
 					<TextInputUnit
-						label="Hex Code"
+						label="Hex Code *"
 						inputId="hex-input"
 						placeholder="#FECE00"
 						bind:boundValue={inputHex}
 					/>
 					<TextInputUnit
-						label="Token Name"
+						label="Token Name *"
 						inputId="name-input"
 						placeholder="My Color"
 						bind:boundValue={inputName}

@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { copyToClipboard } from "$lib/index";
+	import copyIcon from "$lib/icons/copyIcon.svelte";
+	import CopyIcon from "$lib/icons/copyIcon.svelte";
 	/**
 	 * ColorCube Componenet
 	 * @param {string}
@@ -36,16 +38,9 @@
 		}}
 	>
 		{hexLabel}
+		<CopyIcon/>
 	</button>
-	<button
-    type="button"
-		class="token-label"
-		on:click={() => {
-			copyToClipboard(tokenLabel);
-		}}
-	>
-		{tokenLabel}
-	</button>
+	<p class="token-label">{tokenLabel}</p>
 </div>
 
 <style>
@@ -60,6 +55,7 @@
 		border: solid 1px transparent;
 		transition: all 0.2s;
 		cursor: copy;
+		font-family: var(--fontfamily-monospace);
 	}
 
 	.color-cube:hover {
@@ -78,7 +74,6 @@
     padding: var(--gap-xs);
     margin: 0px;
     font-family: monospace;
-    cursor: copy;
   }
 
 	.hex-label {		
@@ -86,6 +81,9 @@
 		color: rgba(0, 0, 0, 0.75);
 		transition: all 0.1s;
 		border: solid 1px transparent;
+		display: flex;
+		gap: var(--gap-xs);
+		cursor: copy;
 	}
 
 	.hex-label:hover {
@@ -102,5 +100,7 @@
 
 	.token-label {
 		border: none;
+		font-size: 0.75rem;
+		color: var(--gray-8);
 	}
 </style>

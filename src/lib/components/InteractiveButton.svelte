@@ -17,7 +17,12 @@
 <style>
   .interactive-button {
     padding: var(--padding-inline);
-    background-color: var(--blue-3);
-    color: var(--black);
+    background-color: var(--gray-8);
+    color: var(--white);
+    transition: var(--transition-m);
+  }
+
+  .interactive-button:hover {
+    background-color: var(--gray-9);
   }
 </style>
