@@ -7,6 +7,8 @@
   
   // Props
   export let stringToCopy:string;
+  export let copyMessage:string = `Copied: ${stringToCopy}`;
+  export let classes:string | undefined = undefined;
 
   // Create custom event 
   const dispatch = createEventDispatcher();
@@ -19,7 +21,7 @@
     {
       target: document.body,
       props: {
-        message: "Copied to Clipboard",
+        message: copyMessage,
         duration: 2000
       }
     });
@@ -27,10 +29,10 @@
   
   // Event handler that issues the custom event 
   function handleCopytoClipboard() {
-      // Issue event 
+      // Issue custom event 
       dispatch('copy');
       
-      // Copy string to clipboard
+      // Copy string to clipboard. Function in $lib/copyToClipboard.ts
       copyToClipboard(stringToCopy);
       
       // Show snackbar
@@ -38,6 +40,16 @@
     }
 </script>
 
-<button on:click={handleCopytoClipboard}>
+<button on:click={handleCopytoClipboard}
+  type="button"
+  class={classes}>
   <slot/>
 </button>
+
+<style>
+  button {
+    padding: 0px;
+    width: max-content;
+    background-color: transparent;
+  }
+</style>

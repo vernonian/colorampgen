@@ -57,37 +57,40 @@
 	}
 </script>
 
-<CopyToClipboard stringToCopy="test" on:copy={() => {
-		console.log("Copy Event");
-	}} >
-	Click me
-</CopyToClipboard>
-
 <section class="section-wrap">
 	<div class="content-wrap f-col">	
 		<h1 class="display-m">Color Ramp Generator</h1>
 		<section id="main-grid" class="grid">
-			<aside class="f-col">
 
+			<!-- Right side menu for inputs -->
+			<aside class="f-col">
 				<form class="f-col">
+
+					<!-- Hex code input -->
 					<TextInputUnit
 						label="Hex Code *"
 						inputId="hex-input"
 						placeholder="#FECE00"
 						bind:boundValue={inputHex}
 					/>
+
+					<!-- Color name input -->
 					<TextInputUnit
 						label="Token Name *"
 						inputId="name-input"
 						placeholder="My Color"
 						bind:boundValue={inputName}
 					/>
+
+					<!-- Submit form button -->
 					<InteractiveButton
 						id="generate-btn"
 						text="Generate Color Ramp"
 						handleClick={() => handleCreateColorRamp(inputHex, inputName)}
 					></InteractiveButton>
 				</form>
+				
+				<!-- Informational disclosures -->
 				<DetailsDropdown summary="How do I use this?">
 					<p>
 						Enter a hex code and click "Generate" to create a color ramp of tints and shades. Once the
@@ -101,6 +104,8 @@
 					<p><a href="https://github.com/vernonian/colorampgen" target="_blank">See GitHub repo</a> for more.</p>
 				</DetailsDropdown>
 			</aside>
+
+			<!-- Section for color ramps to appear -->
 			<section id="target" class="f-col">
 				{#each colorRamps as ramp (ramp.id)}
 					<ColorRamp baseName={ramp.baseName} baseHex={ramp.baseHex} />

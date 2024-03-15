@@ -13,6 +13,7 @@
   }
 </script>
 
+<!-- Show the snackbar when the isVisible prop is true -->
 {#if isVisible}
   <div class="snackbar">
     <p>{message}</p>

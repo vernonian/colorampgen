@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { copyToClipboard } from "$lib/index";
 	import CopyIcon from "$lib/icons/copyIcon.svelte";
+	import CopyToClipboard from "./CopyToClipboard.svelte";
 	
 	/**
 	 * ColorCube Componenet
@@ -22,24 +23,31 @@
 </script>
 
 <div class="color-cube-wrap f-col f-center-end">
-	<button
-    type="button"
-		class="color-cube"
-		style="background-color: {hexLabel}"
+	<!-- Color cube to visualize the color -->
+	<CopyToClipboard 
+		on:click={() => {
+			copyToClipboard(hexLabel);
+		}}	
+		stringToCopy={hexLabel}
+		classes="color-cube"
+		>
+		<div
+			class="color-cube"
+			style="background-color: {hexLabel}">
+		</div>
+	</CopyToClipboard>
+
+	<!-- Hex label for matching color -->
+	<CopyToClipboard 
 		on:click={() => {
 			copyToClipboard(hexLabel);
 		}}
-	></button>
-	<button
-    type="button"
-		class="hex-label"
-		on:click={() => {
-			copyToClipboard(hexLabel);
-		}}
-	>
-		{hexLabel}
-		<CopyIcon/>
-	</button>
+		stringToCopy={hexLabel}
+		classes="hex-label">
+		{hexLabel} <CopyIcon/>
+	</CopyToClipboard>
+
+	<!-- Token label for matching color -->
 	<p class="token-label">{tokenLabel}</p>
 </div>
 

@@ -2,6 +2,7 @@
 	import ColorCube from './ColorCube.svelte';
 	import { copyToClipboard } from '$lib/index';
 	import CopyIcon from '$lib/icons/copyIcon.svelte';
+	import CopyToClipboard from './CopyToClipboard.svelte';
 
 	type ColorShadePair = {
 		hex: string;
@@ -81,11 +82,14 @@
 </script>
 
 <section class="color-ramp-wrap f-col" style="border-color:{rampShades[5].hex};">
+
+	<!-- Color name and basic info -->
 	<div class="f-col gap-xxs">
 		<h3>{baseName}</h3>
 		<p class="ramp-label">Base color: <span class="color-preview" style="background-color:{baseHex};"></span> <span>{baseHex}</span></p>
 	</div>
 
+	<!-- List of ColorCubes for each generated shade -->
 	<ul class="color-ramp">
 		{#each shades as shade, i}
 			<li>
@@ -93,32 +97,34 @@
 			</li>
 		{/each}
 	</ul>
+
+	<!-- User opens disclosure to copy CSS snippet  -->
 	<details>
 		<summary>CSS Tokens</summary>
 		<div class="f-col">
-			<button
-				class="copy-CSS-btn f-row gap-xxs"
-				on:click={() => {
-					copyToClipboard(rampCSS);
-				}}>Copy CSS
-					<CopyIcon/>
-			</button>
-			<div 
-				class="token-list" 
-				style="background-color: {rampShades[0].hex};"
-				role="button"
-				tabindex="0"
-				on:click={() => {
-					copyToClipboard(rampCSS)}
-				}
-				on:keypress={() => {
-					copyToClipboard(rampCSS)}
-				}
-					>
-				{#each rampShades as shade, i}
-					{shade.label}: {shade.hex};<br />
-				{/each}
-			</div>
+			<!-- Click label to copy the color CSS token-variable pairs -->
+			<CopyToClipboard
+				stringToCopy={rampCSS}
+				copyMessage="CSS Copied"
+				classes="copy-CSS-btn f-row gap-xxs"
+				>
+				<span>Copy CSS</span><CopyIcon/>	
+			</CopyToClipboard>
+		
+			<!-- Add click to copy functionality on the code snippet -->
+			<CopyToClipboard
+				stringToCopy={rampCSS}
+				copyMessage="CSS Copied"
+			>
+				<div 
+					class="token-list" 
+					style="background-color: {rampShades[0].hex};"
+				>
+					{#each rampShades as shade, i}
+						{shade.label}: {shade.hex};<br />
+					{/each}
+				</div>
+			</CopyToClipboard>
 		</div>
 	</details>
 </section>
