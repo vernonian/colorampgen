@@ -19,7 +19,7 @@
 	export let index: number | string;
 
 	const hexLabel: string = color.toUpperCase();
-	const tokenLabel: string = `--${name}-${index.toString()}`;
+	const tokenLabel: string = `--${name.toLowerCase()}-${index.toString()}`;
 </script>
 
 <div class="color-cube-wrap f-col f-center-end">

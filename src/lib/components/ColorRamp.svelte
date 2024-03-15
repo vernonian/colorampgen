@@ -17,7 +17,7 @@
 	//
 	const rampShades: ColorShadePair[] = [];
 	const shades: string[] = generateColorShades(baseHex);
-	const tokens: string[] = generateColorNames(baseName);
+	const tokens: string[] = generateColorNames(baseName.toLowerCase());
 	let rampCSS: string = '';
 
 	// Initialize the rampShades array
