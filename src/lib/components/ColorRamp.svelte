@@ -101,7 +101,7 @@
 	<!-- User opens disclosure to copy CSS snippet  -->
 	<details>
 		<summary>CSS Tokens</summary>
-		<div class="f-col">
+		<div class="f-col f-start">
 			<!-- Click label to copy the color CSS token-variable pairs -->
 			<CopyToClipboard
 				stringToCopy={rampCSS}

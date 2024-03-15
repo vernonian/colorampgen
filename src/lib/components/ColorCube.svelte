@@ -42,9 +42,12 @@
 		on:click={() => {
 			copyToClipboard(hexLabel);
 		}}
-		stringToCopy={hexLabel}
-		classes="hex-label">
-		{hexLabel} <CopyIcon/>
+		classes="full-width"
+		stringToCopy={hexLabel}>
+		<div class="hex-label">
+			<span>{hexLabel}</span>
+			<CopyIcon/>
+		</div> 
 	</CopyToClipboard>
 
 	<!-- Token label for matching color -->
@@ -55,6 +58,7 @@
 
 	.color-cube-wrap {
 		gap: 0px;	
+		width: 100%;
 	}
 
 	.color-cube {
@@ -81,13 +85,13 @@
     text-align: center;
     padding: var(--gap-xs);
     margin: 0px;
-    font-family: monospace;
+    font-family: var(--fontfamily-monospace);
   }
 
 	.hex-label {		
 		background-color: rgba(0, 0, 0, 0.05);
 		color: rgba(0, 0, 0, 0.75);
-		transition: all 0.1s;
+		transition: var(--transition-m);
 		border: solid 1px transparent;
 		display: flex;
 		gap: var(--gap-xs);

@@ -49,7 +49,10 @@
 <style>
   button {
     padding: 0px;
-    width: max-content;
+    width: inherit;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
