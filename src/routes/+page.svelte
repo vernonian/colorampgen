@@ -3,15 +3,7 @@
 	import InteractiveButton from '$lib/components/InteractiveButton.svelte';
 	import ColorRamp from '$lib/components/ColorRamp.svelte';
 	import DetailsDropdown from '$lib/components/DetailsDropdown.svelte';
-	import CopyToClipboard from '$lib/components/CopyToClipboard.svelte';
-
-		// Types
-		// Define type for object in color ramps array
-		type ColorRampItem = {
-		baseName: string;
-		baseHex: string;
-		id: number;
-	};
+	import {type ColorRampItem } from '$lib/types/ColorRampItem';
 
 	// Vars
 	let inputHex: string = '#CACACA';
