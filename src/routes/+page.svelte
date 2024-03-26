@@ -1,7 +1,7 @@
 <script lang="ts">
 	import TextInputUnit from '$lib/components/TextInputUnit.svelte';
 	import InteractiveButton from '$lib/components/InteractiveButton.svelte';
-	import ColorRamp from '$lib/components/ColorRamp.svelte';
+	import ColorUnit from '$lib/components/ColorUnit.svelte';
 	import DetailsDropdown from '$lib/components/DetailsDropdown.svelte';
 	import {type ColorRampItem } from '$lib/types/ColorRampItem';
 
@@ -97,10 +97,10 @@
 				</DetailsDropdown>
 			</aside>
 
-			<!-- Section for color ramps to appear -->
-			<section id="target" class="f-col">
+			<!-- Section for color units to appear -->
+			<section class="f-col">
 				{#each colorRamps as ramp (ramp.id)}
-					<ColorRamp baseName={ramp.baseName} baseHex={ramp.baseHex} />
+					<ColorUnit baseName={ramp.baseName} baseHex={ramp.baseHex} />
 				{/each}
 			</section>
 		</section>
