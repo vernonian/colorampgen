@@ -10,16 +10,12 @@
 	 * Props
 	 * color: A hex string to represent the color.
 	 * name: A string used for the cube's token name.
-	 * index index: An integer or string used for the cube's token name.
 	 * hexLabel : The hex string of the color.
-	 * tokenLabel : The css variable name string.
 	 */
 	export let color: string;
 	export let name: string;
-	export let index: number | string;
 
 	const hexLabel: string = color.toUpperCase();
-	const tokenLabel: string = `--${name.toLowerCase()}-${index.toString()}`;
 </script>
 
 <div class="color-cube-wrap f-col f-center-end">
@@ -51,7 +47,7 @@
 	</CopyToClipboard>
 
 	<!-- Token label for matching color -->
-	<p class="token-label">{tokenLabel}</p>
+	<p class="token-label">{name}</p>
 </div>
 
 <style>
@@ -62,7 +58,7 @@
 	}
 
 	.color-cube {
-		width: 100px;
+		width: 100%;
 		height: 100px;
 		border: solid 1px transparent;
 		transition: all 0.2s;
@@ -86,6 +82,7 @@
     padding: var(--gap-xs);
     margin: 0px;
     font-family: var(--fontfamily-monospace);
+		word-break: break-all;
   }
 
 	.hex-label {		

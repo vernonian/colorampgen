@@ -17,7 +17,7 @@
 	//
 	const rampShades: ColorShadePair[] = [];
 	const shades: string[] = generateColorShades(baseHex);
-	const tokens: string[] = generateColorNames(baseName.toLowerCase());
+	const tokens: string[] = generateColorNames(baseName.toLowerCase().replace(/\s/g, "-"));
 	let rampCSS: string = '';
 
 	// Initialize the rampShades array
@@ -93,7 +93,7 @@
 	<ul class="color-ramp">
 		{#each shades as shade, i}
 			<li>
-				<ColorCube color={shade} name={baseName} index={i} />
+				<ColorCube color={shade} name={tokens[i]} />
 			</li>
 		{/each}
 	</ul>
@@ -136,11 +136,23 @@
 	}
 
 	.color-ramp {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem;
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		gap: var(--m) var(--xxs);
 		list-style: none;
 		padding: 0px;
+	}
+
+	@media screen and (max-width: 1024px){
+		.color-ramp {
+			grid-template-columns: repeat(5, 1fr);
+		}
+	}
+
+	@media screen and (max-width: 768px){
+		.color-ramp {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 
 	.ramp-label {
@@ -164,12 +176,6 @@
 	.token-list {
 		padding: var(--gap-m);
 		font-family: monospace;
-    width: max-content;
-	}
-	.copy-CSS-btn {
-		padding: 0px;
-		background-color: transparent;
-		color: var(--black);
     width: max-content;
 	}
 </style>
