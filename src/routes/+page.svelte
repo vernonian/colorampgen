@@ -10,6 +10,8 @@
 	let inputName: string;
 	let colorRamps: ColorRampItem[] = [ {baseName: "Gray", baseHex: "#CACACA", id:0} ];
 
+	const colorsLocalStorageKey = "baseColorsArray"
+
 	// Functions
 	/**
 	 * Validates a string as a hex code.
@@ -40,12 +42,27 @@
 
 		// Validate string as a hex code
 		if (isValidHexCode(hex)) {
-			// Create color ramp
+			// Create color ramp and add it to colorRamps array
 			colorRamps = [{ baseName: name, baseHex: hex, id: colorRamps.length + 1 }, ...colorRamps];
+
+			// Save updated colorRamps to local storage
+			saveColorRampsArrayToLocalStorage();
 		} else {
 			alert('Error: Invalid hex code. Please enter a valid hex code.');
 			return;
 		}
+	}
+
+	/**
+	 * Check for local storage
+	*/
+
+	/**
+	 * Set local storage
+	*/
+	function saveColorRampsArrayToLocalStorage() {
+		let jsonString = JSON.stringify(colorRamps);
+		localStorage.setItem(colorsLocalStorageKey, jsonString);
 	}
 </script>
 
