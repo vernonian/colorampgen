@@ -43,7 +43,7 @@
 		// Validate string as a hex code
 		if (isValidHexCode(hex)) {
 			// Create color ramp and add it to colorRamps array
-			colorRamps = [{ baseName: name, baseHex: hex, id: colorRamps.length + 1 }, ...colorRamps];
+			colorRamps = [{ baseName: name, baseHex: hex, id: colorRamps.length }, ...colorRamps];
 
 			// Save updated colorRamps to local storage
 			saveColorRampsArrayToLocalStorage();
