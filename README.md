@@ -1,7 +1,7 @@
 # ColorampGen
 
 Weclome to ColorampGen!
-(https://colorampgen.vercel.app/)[View the tool in action]!
+(https://colorampgen.vercel.app) [View the tool in action]!
 
 ## Intro
 
